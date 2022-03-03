@@ -65,6 +65,10 @@ LedgerHistory::insert(std::shared_ptr<Ledger const> ledger, bool validated)
         LogicError("mutable Ledger in insert");
 
     assert(ledger->stateMap().getHash().isNonZero());
+    if (app_.timeKeeper().closeTime().time_since_epoch() -
+            ledger->info().closeTime.time_since_epoch() >
+        std::chrono::hours(24))
+        return false;
 
     const bool alreadyHad = m_ledgers_by_hash.canonicalize_replace_cache(
         ledger->info().hash, ledger);
