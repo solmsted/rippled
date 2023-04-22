@@ -130,6 +130,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa3c5b5cd9dca5f906be4b36640706e3c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1ApplyView.html#aa3c5b5cd9dca5f906be4b36640706e3c">insert</a> (<a class="elRef" href="http://en.cppreference.com/w/cpp/memory/shared_ptr.html">std::shared_ptr</a>&lt; <a class="el" href="namespaceripple.html#abbba3966df1925ac76f6d04c0aa1abe3">SLE</a> &gt; const &amp;sle)=0</td></tr>
 <tr class="memdesc:aa3c5b5cd9dca5f906be4b36640706e3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a new state SLE.  <a href="classripple_1_1ApplyView.html#aa3c5b5cd9dca5f906be4b36640706e3c">More...</a><br /></td></tr>
 <tr class="separator:aa3c5b5cd9dca5f906be4b36640706e3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a469fe9366dd58b47c9b29ba98bd3fc8d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1ApplyView.html#a469fe9366dd58b47c9b29ba98bd3fc8d">dirDelete</a> (<a class="el" href="structripple_1_1Keylet.html">Keylet</a> const &amp;directory, <a class="elRef" href="http://en.cppreference.com/w/cpp/utility/functional/function.html">std::function</a>&lt; void(<a class="el" href="namespaceripple.html#a356c68147333a9a48a344718038576d9">uint256</a> const &amp;)&gt; const &amp;)</td></tr>
+<tr class="memdesc:a469fe9366dd58b47c9b29ba98bd3fc8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the specified directory, invoking the callback for every node.  <a href="classripple_1_1ApplyView.html#a469fe9366dd58b47c9b29ba98bd3fc8d">More...</a><br /></td></tr>
+<tr class="separator:a469fe9366dd58b47c9b29ba98bd3fc8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68f2bcf1204498ac968947005ef9c3de"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classripple_1_1ApplyView.html#a68f2bcf1204498ac968947005ef9c3de">emptyDirDelete</a> (<a class="el" href="structripple_1_1Keylet.html">Keylet</a> const &amp;directory)</td></tr>
 <tr class="memdesc:a68f2bcf1204498ac968947005ef9c3de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the specified directory, if it is empty.  <a href="classripple_1_1ApplyView.html#a68f2bcf1204498ac968947005ef9c3de">More...</a><br /></td></tr>
 <tr class="separator:a68f2bcf1204498ac968947005ef9c3de"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -239,7 +242,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ReadView_8h_source.html#l00196">196</a> of file <a class="el" href="ReadView_8h_source.html">ReadView.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ReadView_8h_source.html#l00129">129</a> of file <a class="el" href="ReadView_8h_source.html">ReadView.h</a>.</p>
 
 </div>
 </div>
@@ -263,7 +266,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ReadView_8h_source.html#l00198">198</a> of file <a class="el" href="ReadView_8h_source.html">ReadView.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ReadView_8h_source.html#l00131">131</a> of file <a class="el" href="ReadView_8h_source.html">ReadView.h</a>.</p>
 
 </div>
 </div>
@@ -287,7 +290,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ReadView_8h_source.html#l00200">200</a> of file <a class="el" href="ReadView_8h_source.html">ReadView.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ReadView_8h_source.html#l00133">133</a> of file <a class="el" href="ReadView_8h_source.html">ReadView.h</a>.</p>
 
 </div>
 </div>
@@ -872,6 +875,38 @@ on this instance of the RawView.
 
 </div>
 </div>
+<a id="a469fe9366dd58b47c9b29ba98bd3fc8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a469fe9366dd58b47c9b29ba98bd3fc8d">&#9670;&nbsp;</a></span>dirDelete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ripple::ApplyView::dirDelete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structripple_1_1Keylet.html">Keylet</a> const &amp;&#160;</td>
+          <td class="paramname"><em>directory</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="elRef" href="http://en.cppreference.com/w/cpp/utility/functional/function.html">std::function</a>&lt; void(<a class="el" href="namespaceripple.html#a356c68147333a9a48a344718038576d9">uint256</a> const &amp;)&gt; const &amp;&#160;</td>
+          <td class="paramname"><em>callback</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove the specified directory, invoking the callback for every node. </p>
+
+<p class="definition">Definition at line <a class="el" href="ApplyView_8cpp_source.html#l00338">338</a> of file <a class="el" href="ApplyView_8cpp_source.html">ApplyView.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a68f2bcf1204498ac968947005ef9c3de"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a68f2bcf1204498ac968947005ef9c3de">&#9670;&nbsp;</a></span>emptyDirDelete()</h2>
 
@@ -985,7 +1020,7 @@ on this instance of the RawView.
 
 <p>Returns the close time of the previous ledger. </p>
 
-<p class="definition">Definition at line <a class="el" href="ReadView_8h_source.html#l00253">253</a> of file <a class="el" href="ReadView_8h_source.html">ReadView.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ReadView_8h_source.html#l00186">186</a> of file <a class="el" href="ReadView_8h_source.html">ReadView.h</a>.</p>
 
 </div>
 </div>
@@ -1014,7 +1049,7 @@ on this instance of the RawView.
 
 <p>Returns the sequence number of the base ledger. </p>
 
-<p class="definition">Definition at line <a class="el" href="ReadView_8h_source.html#l00260">260</a> of file <a class="el" href="ReadView_8h_source.html">ReadView.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ReadView_8h_source.html#l00193">193</a> of file <a class="el" href="ReadView_8h_source.html">ReadView.h</a>.</p>
 
 </div>
 </div>
@@ -1146,7 +1181,7 @@ on this instance of the RawView.
 <p>This returns the key of the first state item whose key is greater than the specified key. If no such key is present, std::nullopt is returned.</p>
 <p>If <code>last</code> is engaged, returns std::nullopt when the key returned would be outside the open interval (key, last). </p>
 
-<p>Implemented in <a class="el" href="classripple_1_1OpenView.html#a76b4e313ced46f6caaff0b53da2298bb">ripple::OpenView</a>, and <a class="el" href="classripple_1_1detail_1_1ApplyViewBase.html#abb4191e08ea906c3074d4020ad6c8fde">ripple::detail::ApplyViewBase</a>.</p>
+<p>Implemented in <a class="el" href="classripple_1_1Ledger.html#ae0a63c9a1943ea6a18726df087a37bdc">ripple::Ledger</a>, <a class="el" href="classripple_1_1OpenView.html#a76b4e313ced46f6caaff0b53da2298bb">ripple::OpenView</a>, and <a class="el" href="classripple_1_1detail_1_1ApplyViewBase.html#abb4191e08ea906c3074d4020ad6c8fde">ripple::detail::ApplyViewBase</a>.</p>
 
 </div>
 </div>
@@ -1225,7 +1260,7 @@ on this instance of the RawView.
 
 <p>Reimplemented in <a class="el" href="classripple_1_1PaymentSandbox.html#a96457b37722d895c585bcd260dd08a0f">ripple::PaymentSandbox</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ReadView_8h_source.html#l00320">320</a> of file <a class="el" href="ReadView_8h_source.html">ReadView.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ReadView_8h_source.html#l00253">253</a> of file <a class="el" href="ReadView_8h_source.html">ReadView.h</a>.</p>
 
 </div>
 </div>
@@ -1265,7 +1300,7 @@ on this instance of the RawView.
 
 <p>Reimplemented in <a class="el" href="classripple_1_1PaymentSandbox.html#a0e77b6bdc540075e1c8e5a6f447c4b13">ripple::PaymentSandbox</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ReadView_8h_source.html#l00334">334</a> of file <a class="el" href="ReadView_8h_source.html">ReadView.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ReadView_8h_source.html#l00267">267</a> of file <a class="el" href="ReadView_8h_source.html">ReadView.h</a>.</p>
 
 </div>
 </div>
@@ -1346,6 +1381,8 @@ on this instance of the RawView.
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classripple_1_1OpenView.html#a13b527a568cd66ab382e38fc6834ebd8">ripple::OpenView</a>, <a class="el" href="classripple_1_1Ledger.html#a0b300e04e1cd2c608710d02467f4e7be">ripple::Ledger</a>, <a class="el" href="classripple_1_1detail_1_1CachedViewImpl.html#ae165ae0cb1f8c8f40043e7fd81e7ab70">ripple::detail::CachedViewImpl</a>, and <a class="el" href="classripple_1_1detail_1_1ApplyViewBase.html#ae5b17c3a02eff5434906311a419734fb">ripple::detail::ApplyViewBase</a>.</p>
 
 </div>
 </div>
@@ -1430,7 +1467,7 @@ on this instance of the RawView.
 <p>Returns <code>true</code> if a tx exists in the tx map. </p>
 <p>A tx exists in the map if it is part of the base ledger, or if it is a newly inserted tx. </p>
 
-<p>Implemented in <a class="el" href="classripple_1_1OpenView.html#a2294a6339fc789d88ca4b155a493c71a">ripple::OpenView</a>, and <a class="el" href="classripple_1_1detail_1_1ApplyViewBase.html#ad7cd53575d79dd8f0bf93a0143957b9d">ripple::detail::ApplyViewBase</a>.</p>
+<p>Implemented in <a class="el" href="classripple_1_1Ledger.html#a46a546d8198b17cb9dff3036d920eee4">ripple::Ledger</a>, <a class="el" href="classripple_1_1OpenView.html#a2294a6339fc789d88ca4b155a493c71a">ripple::OpenView</a>, and <a class="el" href="classripple_1_1detail_1_1ApplyViewBase.html#ad7cd53575d79dd8f0bf93a0143957b9d">ripple::detail::ApplyViewBase</a>.</p>
 
 </div>
 </div>
@@ -1490,7 +1527,7 @@ on this instance of the RawView.
 <p>Iterable range of ledger state items. </p>
 <dl class="section note"><dt>Note</dt><dd>Visiting each state entry in the ledger can become quite expensive as the ledger grows. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="ReadView_8h_source.html#l00387">387</a> of file <a class="el" href="ReadView_8h_source.html">ReadView.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ReadView_8h_source.html#l00320">320</a> of file <a class="el" href="ReadView_8h_source.html">ReadView.h</a>.</p>
 
 </div>
 </div>
@@ -1514,7 +1551,7 @@ on this instance of the RawView.
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ReadView_8h_source.html#l00390">390</a> of file <a class="el" href="ReadView_8h_source.html">ReadView.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ReadView_8h_source.html#l00323">323</a> of file <a class="el" href="ReadView_8h_source.html">ReadView.h</a>.</p>
 
 </div>
 </div>
